@@ -33,6 +33,7 @@
           <!-- NAVLINKS -->
           <!-- <a href="#/about" class="nav-link">About</a> -->
           <a href="#/cars" class="nav-link btn btn-success">Cars</a>
+          <a href="#/houses" class="nav-link btn btn-warning">Houses</a>
         </div>
       </div>
       <div class="flex-grow-1 justify-content-end align-items-center d-flex" id="authstate"></div>
@@ -72,6 +73,44 @@
 
 
     </section>
+    <!-- NOTE this is going to be the Houses template -->
+    <div id="houses" class="container-fluid">
+      <!-- <section class="row justify-content-center">
+        <div class="col-8 elevation-5 text-center">
+          <span>Price, Bedrooms, Bathrooms</span>
+          <div class="row">
+            <div class="col-4">
+              <img class="w-100" src="" alt="img url">
+            </div>
+            <div class="col-8 justify-content-between">
+              <span>levels</span>
+              <span>Year</span>
+              <br>
+              <span>Description</span>
+            </div>
+          </div>
+        </div>
+      </section> -->
+    </div>
+    <div class="container-fluid">
+      <section class="row">
+        <div class="col-12">
+          <button onclick="app.HousesController.createHouse()" class="btn btn-primary" type="button"
+            data-bs-toggle="collapse" data-bs-target="#houseFormCollapse" aria-expanded="false"
+            aria-controls="collapseExample">List House 🏠</button>
+        </div>
+        <div class="collapse" id="houseFormCollapse">
+          <form class="row p-2" onsubmit="app.HousesController.createHouse()">
+            <div class="form-floating mb-3 col-4">
+              <input required type="text" minLength="10" maxLength="50" class="form-control" id="houseDescription"
+                name="description" placeholder="House Description">
+              <label for="houseDescription">Description of the House</label>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+
 
 
   </main>
