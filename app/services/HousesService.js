@@ -10,6 +10,12 @@ class HousesService {
         AppState.houses = mappedHouses
         console.log(response.data)
     }
+    async createHouse(formData) {
+        const response = await api.post('api/houses', formData)
+        const newHouse = new House(response.data)
+        AppState.houses.push(newHouse)
+        AppState.emit('houses')
+    }
 
 }
 
